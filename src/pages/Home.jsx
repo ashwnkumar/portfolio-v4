@@ -15,10 +15,11 @@ import { Link } from "react-router-dom";
 import AboutCard from "../components/cards/home/AboutCard";
 import QuoteGenerator from "../components/cards/home/QuoteGenerator";
 import WorkExpCard from "../components/cards/home/WorkExpCard";
+import ThemeSwitcher from "../components/cards/home/ThemeSwitcher";
+import TechStackCard from "../components/cards/home/TechStackCard";
+import { admin } from "../data/admin";
 
 const Home = () => {
-  const { admin } = useGlobal();
-
   const handleDownloadResume = () => {
     const link = document.createElement("a");
     link.href = admin.resume;
@@ -28,9 +29,9 @@ const Home = () => {
     document.body.removeChild(link);
   };
 
-  const linkedIn = admin?.links?.find((link) => link?.title === "LinkedIn");
-  const github = admin?.links?.find((link) => link?.title === "Github");
-  const instagram = admin?.links?.find((link) => link?.title === "Instagram");
+  const linkedIn = admin.links.find((link) => link.title === "LinkedIn");
+  const github = admin.links.find((link) => link.title === "Github");
+  const instagram = admin.links.find((link) => link.title === "Instagram");
 
   return (
     <>
@@ -44,23 +45,27 @@ const Home = () => {
         </div>
       </GridCard>
       {/* About Card */}
-      <GridCard className={"col-start-2 col-end-5"}>
+      <GridCard className={"col-start-2 col-end-5"} navTo={"/about"}>
         <AboutCard />
       </GridCard>
-      {/* Quote Generator */}
-      <GridCard className={"col-start-5 col-end-6"}>
-        <QuoteGenerator />
+      {/* Tech Stack Card */}
+      <GridCard
+        title={"Tech Stack:"}
+        className={"col-start-5 col-end-6 row-start-1 row-end-3"}
+      >
+        <TechStackCard />
       </GridCard>
       {/* Theme Switcher */}
       <GridCard>
-        <ThemeSwitcher/>
+        <ThemeSwitcher />
+      </GridCard>
+      {/* Quote Card */}
+      <GridCard className={"col-start-1 col-end-2"}>
+        <QuoteGenerator />
       </GridCard>
       {/* Work Exp */}
-      <GridCard className="col-start-1 col-end-3 ">
+      <GridCard title={"Work Experience:"} className="col-start-2 col-end-4">
         <WorkExpCard />
-      </GridCard>
-      <GridCard>
-        <p>6</p>
       </GridCard>
       <GridCard>
         <p>7</p>

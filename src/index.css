@@ -2,24 +2,57 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark: #0c0e12;
-  --color-card: #141418;
-  --color-border: #27272a;
-  --color-primary: #f4f4f5;
-  --color-secondary: rgba(244, 244, 245, 0.5);
+  --color-dark: #09090b;
+  --color-card: #18181b;
+  --color-border: #313135;
+  --color-hover: #313135;
+  --color-primary: #e5e7eb;
+  --color-secondary: #9ca3af;
   --font-primary: "Outfit", sans-serif;
   --font-secondary: "Reddit Mono", monospace;
 }
 
-:root {
-  --color-dark: #0c0e12;
-  --color-card: #141418;
-  --color-border: #27272a;
-  --color-primary: #f4f4f5;
-  --color-secondary: rgba(244, 244, 245, 0.5);
-  --font-primary: "Outfit", sans-serif;
-  --font-secondary: "Reddit Mono", monospace;
+
+:root,
+[theme="dark"] {
+  --color-dark: #09090b;
+  --color-card: #18181b;
+  --color-border: #313135;
+  --color-hover: #313135;
+  --color-primary: #e5e7eb;
+  --color-secondary: #9ca3af;
 }
+
+[theme="light"] {
+  --color-dark: #e5e7eb;
+  --color-card: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-hover: #e2e8f0;
+  --color-primary: #111827;
+  --color-secondary: #4b5563;
+}
+
+[theme="matrix"] {
+  --color-dark: #121212;
+  --color-card: #181818;
+  --color-border: #2a4d2a;
+  --color-hover: #4d6e4d;
+  --color-primary: #56ff56;
+  --color-secondary: #338a33;
+}
+
+
+[theme="cyberpunk"] {
+  --color-dark: #0a0a0a;
+  --color-card: #161616;
+  --color-border: #541286;
+  --color-hover: rgba(156, 27, 255, 0.6);
+  --color-primary: #26a3e6;
+  --color-secondary: #c0152e;
+}
+
+
+
 
 body {
   background-color: var(--color-dark);

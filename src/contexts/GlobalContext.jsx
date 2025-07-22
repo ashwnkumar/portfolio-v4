@@ -1,16 +1,23 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import adminData from "../data/admin.json";
+
 
 const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
-  const [admin, setAdmin] = useState({});
+
+  const [theme, setTheme] = useState(document.body.getAttribute("theme") || "dark");
 
   useEffect(() => {
-    setAdmin(adminData);
+
+
+    const theme = localStorage.getItem("theme");
+    if (theme) {
+      document.body.setAttribute("theme", theme);
+      setTheme(theme);
+    }
   }, []);
   return (
-    <GlobalContext.Provider value={{ admin }}>
+    <GlobalContext.Provider value={{ theme, setTheme }}>
       {children}
     </GlobalContext.Provider>
   );
