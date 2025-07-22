@@ -1,22 +1,11 @@
-import React from "react";
 import GridCard from "../components/GridCard";
-import { useGlobal } from "../contexts/GlobalContext";
-import {
-  ArrowUpRight,
-  FileText,
-  Github,
-  GithubIcon,
-  Linkedin,
-} from "lucide-react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faFileLines } from "@fortawesome/free-regular-svg-icons";
-import { Link } from "react-router-dom";
+
 import AboutCard from "../components/cards/home/AboutCard";
 import QuoteGenerator from "../components/cards/home/QuoteGenerator";
 import WorkExpCard from "../components/cards/home/WorkExpCard";
 import ThemeSwitcher from "../components/cards/home/ThemeSwitcher";
 import TechStackCard from "../components/cards/home/TechStackCard";
+import SocialCard from "../components/cards/home/SocialCard";
 import { admin } from "../data/admin";
 
 const Home = () => {
@@ -29,13 +18,9 @@ const Home = () => {
     document.body.removeChild(link);
   };
 
-  const linkedIn = admin.links.find((link) => link.title === "LinkedIn");
-  const github = admin.links.find((link) => link.title === "Github");
-  const instagram = admin.links.find((link) => link.title === "Instagram");
-
   return (
     <>
-      <GridCard className="group  flex items-center justify-center !p-0 overflow-hidden">
+      {/* <GridCard className="group  flex items-center justify-center !p-0 overflow-hidden">
         <div className="w-56 h-56  rounded-full">
           <img
             src={admin.home}
@@ -44,50 +29,63 @@ const Home = () => {
           />
         </div>
       </GridCard>
-      {/* About Card */}
       <GridCard className={"col-start-2 col-end-5"} navTo={"/about"}>
         <AboutCard />
       </GridCard>
-      {/* Tech Stack Card */}
       <GridCard
         title={"Tech Stack:"}
         className={"col-start-5 col-end-6 row-start-1 row-end-3"}
       >
         <TechStackCard />
       </GridCard>
-      {/* Theme Switcher */}
       <GridCard>
         <ThemeSwitcher />
       </GridCard>
-      {/* Quote Card */}
-      <GridCard className={"col-start-1 col-end-2"}>
+      <GridCard className={"col-start-6"}>
         <QuoteGenerator />
       </GridCard>
-      {/* Work Exp */}
-      <GridCard title={"Work Experience:"} className="col-start-2 col-end-4">
+      <GridCard
+        title={"Work Experience:"}
+        className="col-start-3 col-end-5 row-start-2 row-end-3"
+      >
         <WorkExpCard />
       </GridCard>
-      <GridCard>
+      <GridCard className="col-start-1 col-end-3 row-start-2 row-end-4">
         <p>7</p>
       </GridCard>
-      <GridCard>
-        <p>8</p>
+      <GridCard className="col-start-3 col-end-5 row-start-3 row-end-4">
+        <p>7</p>
       </GridCard>
-      <GridCard>
-        <p>9</p>
+      <GridCard className="col-start-5 col-end-6 row-start-3 row-end-4">
+        <p>7</p>
       </GridCard>
-      <GridCard>
-        <p>10</p>
+      <GridCard className="col-start-6  row-start-3 row-end-4">
+      </GridCard> */}
+      <GridCard className={"col-span-2  "}>
+        <div className="flex items-center justify-center">
+          <div className="w-52 h-52  rounded-full ">
+            <img
+              src={admin.homeImage}
+              alt="Profile"
+              className="w-full h-full rounded-full object-cover "
+            />
+          </div>
+        </div>
       </GridCard>
-      <GridCard>
-        <p>11</p>
+      <GridCard className={"col-span-6 row-span-1"} title={"Who I Am:"}>
+        <AboutCard />
       </GridCard>
-      <GridCard>
-        <p>12</p>
+      <GridCard className={"col-span-2 row-span-3"} title={"Tech Stack:"}>
+        <TechStackCard />
       </GridCard>
-      <GridCard>
-        <p>13</p>
+      <GridCard
+        title={"Customize the theme!"}
+        className={"col-span-2 row-span-1 bg-dark border-0 !p-0"}
+      >
+        <ThemeSwitcher />
       </GridCard>
+      <GridCard className={"col-span-2 row-span-4"} title={"4"} />
+      <GridCard className={"col-span-2 row-span-3"} title={"5"} />
     </>
   );
 };
