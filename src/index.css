@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Reddit+Mono:wght@200..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #0c0e12;
+  --color-card: #141418;
+  --color-border: #27272a;
+  --color-primary: #f4f4f5;
+  --color-secondary: rgba(244, 244, 245, 0.5);
+  --font-primary: "Outfit", sans-serif;
+  --font-secondary: "Reddit Mono", monospace;
+}
+
+:root {
+  --color-dark: #0c0e12;
+  --color-card: #141418;
+  --color-border: #27272a;
+  --color-primary: #f4f4f5;
+  --color-secondary: rgba(244, 244, 245, 0.5);
+  --font-primary: "Outfit", sans-serif;
+  --font-secondary: "Reddit Mono", monospace;
+}
+
+body {
+  background-color: var(--color-dark);
+  border-color: var(--color-border);
+  color: var(--color-secondary);
+  font-family: var(--font-primary);
+  font-weight: 300;
+}
