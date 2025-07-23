@@ -36,7 +36,7 @@ const QuoteGenerator = () => {
   return (
     <div className="w-full flex h-full flex-col items-center justify-between text-primary">
       <div className="flex flex-col items-start justify-start gap-2 w-full min-h-[120px]">
-        <h3 className="text-lg text-secondary">Byte Sized Wisdom:</h3>
+        <h3 className="text-xl text-secondary">Byte Sized Wisdom:</h3>
         <p className="text-xl   font-secondary">
           {loading ? (
             <span className="animate-pulse text-muted">{thinkingMsg}</span>

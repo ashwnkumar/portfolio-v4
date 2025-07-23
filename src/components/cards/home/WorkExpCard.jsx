@@ -1,34 +1,70 @@
-import React, { useEffect, useState } from "react";
-import { admin } from "../../../data/admin";
+import React, { useState } from 'react';
+import { admin } from '../../../data/admin';
+import { ChevronDown } from 'lucide-react';
 
 const WorkExpCard = () => {
-  const [exp, setExp] = useState();
+  const { workExp } = admin;
+  const [expandedId, setExpandedId] = useState(null);
 
-  console.log("exp", exp);
+  const toggleItem = (id) => {
+    setExpandedId(prevId => (prevId === id ? null : id));
+  };
 
-  useEffect(() => {
-    setExp(admin.workExp);
-  }, []);
   return (
+    <section className="w-full h-full flex flex-col gap-4 text-start">
+      <h3 className="text-2xl">Work Experience:</h3>
 
+      <div className="w-full h-full space-y-3 overflow-y-auto overflow-x-hidden divide-y divide-border pr-2">
+        {workExp.map(({ _id, position, company, from, to, work, skills }) => {
+          const isExpanded = expandedId === _id;
 
-    <div className="flex flex-col items-center justify-start divide-y w-full divide-border gap-3 mt-4">
-      {exp?.map((item, idx) => (
-        <div className="w-full flex items-center justify-between pb-3">
-          <div className="text-start">
-            <p className="text-xl text-primary font-secondary font-medium">
-              {item.position}
-            </p>
-            <p className="text-lg ">{item.company}</p>
-          </div>
-          <div className="text-end self-end">
-            <p className="text-lg ">
-              {item.from} - {item.to ? item.to : "Present"}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
+          return (
+            <div key={_id} className="w-full pb-3">
+              <button
+                onClick={() => toggleItem(_id)}
+                className="w-full flex items-center justify-between text-left cursor-pointer"
+                aria-expanded={isExpanded}
+              >
+                <div>
+                  <h4 className="text-xl text-primary font-secondary font-medium">{position}</h4>
+                  <p className="text-sm text-muted-foreground">
+                    {company} | {from} - {to || 'Present'}
+                  </p>
+                </div>
+
+                <ChevronDown
+                  className={`transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                />
+              </button>
+
+              {isExpanded && (
+                <div className="space-y-4 mt-3">
+                  {work && (
+                    <ul className="list-disc pl-6 mt-3 space-y-2 text-sm">
+                      {work.map((desc, idx) => (
+                        <li key={idx}>{desc}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {skills && (
+                    <>
+                      <p>Skills Used:</p>
+                      <div className="flex flex-wrap gap-2">
+                        {skills.map((skill, idx) => (
+                          <span key={idx} className="text-sm rounded-full px-4 py-1 border border-border">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

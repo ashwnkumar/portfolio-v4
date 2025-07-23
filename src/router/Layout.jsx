@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className="grid grid-cols-12 gap-4 auto-rows-[minmax(100px,auto)] h-screen overflow-hidden p-5">
+    <div className="grid grid-cols-12 gap-6 auto-rows-[minmax(100px,auto)] h-screen overflow-hidden p-5">
       <Outlet />
     </div>
   );

@@ -10,6 +10,12 @@
   --color-secondary: #9ca3af;
   --font-primary: "Outfit", sans-serif;
   --font-secondary: "Reddit Mono", monospace;
+
+
+}
+
+a:hover {
+  background-color: var(--hover-bg-color);
 }
 
 
@@ -36,7 +42,7 @@
   --color-dark: #121212;
   --color-card: #181818;
   --color-border: #2a4d2a;
-  --color-hover: #4d6e4d;
+  --color-hover: #4d6e4d8f;
   --color-primary: #56ff56;
   --color-secondary: #338a33;
 }
@@ -51,13 +57,25 @@
   --color-secondary: #c0152e;
 }
 
-
-
-
 body {
   background-color: var(--color-dark);
   border-color: var(--color-border);
   color: var(--color-secondary);
   font-family: var(--font-primary);
   font-weight: 300;
+}
+
+/* Custom Scrollbar */
+.custom-scroll::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background-color: var(--color-dark);
+  border-radius: 9999px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 9999px;
 }
