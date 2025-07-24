@@ -15,13 +15,13 @@ const WorkExpCard = () => {
       <h3 className="text-2xl">Work Experience:</h3>
 
       <div className="w-full h-full space-y-3 overflow-y-auto overflow-x-hidden divide-y divide-border pr-2">
-        {workExp.map(({ _id, position, company, from, to, work, skills }) => {
-          const isExpanded = expandedId === _id;
+        {workExp.map(({ id, position, company, from, to, work, skills }) => {
+          const isExpanded = expandedId === id;
 
           return (
-            <div key={_id} className="w-full pb-3">
+            <div key={id} className="w-full pb-3">
               <button
-                onClick={() => toggleItem(_id)}
+                onClick={() => toggleItem(id)}
                 className="w-full flex items-center justify-between text-left cursor-pointer"
                 aria-expanded={isExpanded}
               >

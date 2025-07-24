@@ -9,7 +9,7 @@ const FooterCard = () => {
             <div className="text-start">
                 <h3 className='text-2xl'>Like what you see? Or have something on your mind?</h3>
                 <p className='text-xl'>Feel free to reach out!</p>
-                <div className="flex items-center gap-4 mt-2">
+                <div className="flex items-center gap-4 mt-2b ">
                     {links.map((item) => {
                         return (
                             <a
@@ -17,7 +17,7 @@ const FooterCard = () => {
                                 key={item.title}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="p-4 rounded-xl border border-border hover:text-gray-200 transition-all duration-300 ease-in-out"
+                                className="p-4 hover-link rounded-xl border border-border hover:text-gray-200 transition-all duration-300 ease-in-out"
                                 style={{
                                     transition: 'background-color 0.3s ease-in-out',
                                 }}

@@ -11,24 +11,22 @@ import MusicCard from "../components/cards/home/MusicCard";
 import TheRedButton from "../components/cards/home/TheRedButton";
 import FooterCard from "../components/cards/home/FooterCard";
 import PhotoCard from "../components/cards/home/PhotoCard";
+import ProjectCard from "../components/cards/home/ProjectCard";
+import ImageCard from "../components/cards/home/ImageCard";
 
 const Home = () => {
-  const handleDownloadResume = () => {
-    const link = document.createElement("a");
-    link.href = admin.resume;
-    link.download = "Ashwin-Kumar-Resume.pdf";
-    link.click();
-    link.remove();
-    document.body.removeChild(link);
-  };
 
   return (
-    <>
+    <div className="grid grid-cols-12 gap-6 auto-rows-[minmax(100px,auto)] h-screen overflow-hidden p-5 ">
+
+      <GridCard className={"col-span-2 row-span-1 flex items-center justify-center group"}>
+        {/* <ImageCard/> */}
+      </GridCard>
       <GridCard className={"col-span-6 row-span-1"}>
         <AboutCard />
       </GridCard>
-      <GridCard className={"col-span-2"}>
-        <MusicCard />
+      <GridCard className={"col-span-2 row-span-1"}>
+        <QuoteGenerator />
       </GridCard>
       <GridCard className={"col-span-2 row-span-3"} >
         <TechStackCard />
@@ -38,27 +36,25 @@ const Home = () => {
       >
         <ThemeSwitcher />
       </GridCard>
-      {/* row1 end */}
       <GridCard className={"col-span-3 row-span-4"} >
         <WorkExpCard />
       </GridCard>
-      <GridCard className={"col-span-2 row-span-2"} >
+      <GridCard className={"col-span-2 row-span-2 !p-0"} >
         <PhotoCard />
       </GridCard>
-      <GridCard className={"col-span-3 row-span-2"} title={"6"}  >
+      <GridCard className={"col-span-3 row-span-2 !p-0 overflow-hidden"}>
+        <ProjectCard projectId={"frames-by-ashwin"} />
       </GridCard>
-      <GridCard className={"col-span-2 row-span-2"} >
-        <QuoteGenerator />
+      <GridCard className={"col-span-2 row-span-3 !p-0 overflow-hidden"} >
+        <MusicCard />
       </GridCard>
-      {/* row2 end */}
-      <GridCard className={"col-span-4 row-span-2"} title={"8"} />
-      <GridCard className={"col-span-2 row-span-2 !p-0 overflow-hidden"} >
-        <TheRedButton />
+      <GridCard className={"col-span-4 row-span-2 !p-0 overflow-hidden"} >
+        <ProjectCard projectId={"idbfiles"} />
       </GridCard>
       <GridCard className={"col-span-3 row-span-2"}>
         <FooterCard />
       </GridCard>
-    </>
+    </div>
   );
 };
 

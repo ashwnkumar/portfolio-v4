@@ -37,7 +37,7 @@ const QuoteGenerator = () => {
     <div className="w-full flex h-full flex-col items-center justify-between text-primary">
       <div className="flex flex-col items-start justify-start gap-2 w-full min-h-[120px]">
         <h3 className="text-xl text-secondary">Byte Sized Wisdom:</h3>
-        <p className="text-xl   font-secondary">
+        <p className="text-sm font-secondary">
           {loading ? (
             <span className="animate-pulse text-muted">{thinkingMsg}</span>
           ) : (
@@ -50,10 +50,11 @@ const QuoteGenerator = () => {
         type="button"
         onClick={generateQuote}
         disabled={loading}
-        className={`border border-border rounded-lg w-full text-lg py-2 transition-all duration-300 ease-in-out cursor-pointer ${loading
-          ? "opacity-60 cursor-not-allowed"
-          : "hover:bg-hover active:translate-y-1"
-          }`}
+        className={`border border-border rounded-lg w-full text-lg py-2 transition-all duration-300 ease-in-out cursor-pointer ${
+          loading
+            ? "opacity-60 cursor-not-allowed"
+            : "hover:bg-hover active:translate-y-1"
+        }`}
       >
         {loading ? (
           <span className="inline-flex items-center justify-center gap-1">

@@ -11,10 +11,24 @@
   --font-primary: "Outfit", sans-serif;
   --font-secondary: "Reddit Mono", monospace;
 
+  --animate-vibe: custom 5s ease-in-out infinite;
+
+  @keyframes custom {
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.125);
+    }
+  }
+
 
 }
 
-a:hover {
+.hover-link {
   background-color: var(--hover-bg-color);
 }
 
@@ -52,7 +66,7 @@ a:hover {
   --color-dark: #0a0a0a;
   --color-card: #161616;
   --color-border: #541286;
-  --color-hover: rgba(156, 27, 255, 0.6);
+  --color-hover: rgba(162, 45, 252, 0.39);
   --color-primary: #26a3e6;
   --color-secondary: #c0152e;
 }

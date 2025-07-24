@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "title": "Lose My Mind",
+        "artist": "Don Toliver ft. Doja Cat",
+        "src": "/music/audio/Lose My Mind.mp3",
+        "cover": "/music/cover/Lose My Mind.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Too Many Nights ",
+        "artist": "Metro Boomin ft. Don Toliver",
+        "src": "/music/audio/Too Many Nights.mp3",
+        "cover": "/music/cover/Too Many Nights.jpg"
+    },
+    {
+        "id": 2,
+        "title": "The Middle",
+        "artist": "Jimmy Eat World",
+        "src": "/music/audio/The Middle.mp3",
+        "cover": "/music/cover/The Middle.jpg"
+    }
+]

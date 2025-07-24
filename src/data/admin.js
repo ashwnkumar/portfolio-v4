@@ -7,6 +7,7 @@ export const admin = {
   github: "https://github.com/ashwnkumar",
   resume: "/assets/resume.pdf",
   homeImage: "/assets/home.jpg",
+  framesByAshwin: "https://www.instagram.com/frames.by.ashwin/",
   socialLinks: [
     { title: "Instagram", link: "https://www.instagram.com/ashwnkumar/", icon: faInstagram, color: "#E1306C" },
     { title: "X", link: "https://www.instagram.com/ashwnkumaar/", icon: faXTwitter, color: "#000000" },
@@ -16,14 +17,14 @@ export const admin = {
   ],
   workExp: [
     {
-      _id: "ndss",
+      id: "ndss",
       company: "NDSoftTech Solutions",
       position: "SDE - Trainee",
       from: "Jul 2025",
       skills: ["ReactJS", "NodeJS", "JavaScript", "Express.js", "MongoDB", "NodeJS", "React Native", "TailwindCSS"]
     },
     {
-      _id: "dreams",
+      id: "dreams",
       company: "Dreams International Pvt. Ltd.",
       position: "ReactJS Intern",
       from: "Nov 2024",
