@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import songData from "../../../data/music.json"
 import { IconPlayerPauseFilled, IconPlayerPlayFilled, IconPlayerTrackNextFilled, IconPlayerTrackPrevFilled } from '@tabler/icons-react'
+import { Disc3 } from 'lucide-react';
 
 const MusicCard = () => {
     const [currentIdx, setCurrentIdx] = useState(0);
@@ -70,8 +71,8 @@ const MusicCard = () => {
 
     return (
         <div className="group  w-full h-full flex flex-col items-center justify-center">
-            <h3 className='text-lg pb-3 w-full bg-gradient-to-b from-black py-2 absolute top-0 p-2 text-gray-200 z-10'>
-                Currently Jamming To:
+            <h3 className='text-base  bg-primary flex items-center gap-1 text-dark absolute top-3 left-3 px-3 py-1 rounded-full z-10'>
+                <Disc3 strokeWidth={1.5} size={20} /> Currently Jamming To
             </h3>
             <img src={current.cover} alt={current.title} className={`w-full h-full object-cover transition-all duration-500 ${isPlaying ? 'animate-vibe saturate-100' : "saturate-0"}`} />
             <div className="flex flex-col items-center justify-center gap-2 w-full absolute bottom-0 bg-gradient-to-t from-black py-3">

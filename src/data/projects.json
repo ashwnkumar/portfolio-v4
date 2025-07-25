@@ -62,5 +62,66 @@
             "Fast, lightweight interface built for speed and simplicity.",
             "Works offline after initial load; fully browser-contained."
         ]
+    },
+    {
+        "id": "ashwinkumar-dev",
+        "title": "Developer Portfolio",
+        "subTitle": "The current version of my developer portfolio.",
+        "images": [
+            {
+                "src": "/projects/ashwinkumar-dev/1.png",
+                "alt": "Image 1",
+                "id": 1
+            }
+        ],
+        "description": "The website you're currently on. I was bored by how the previous iteration of my portfolio website looked. Just another generic design that looked like every other template. So I decided to revamp the whole thing from the ground up. Ditched the traditional portfolio design and opted for a design style that always fascinated me - The Bento Grid. I love the jigsaw-puzzle type feel it has and the way it makes the elements look like they're part of a whole. Exactly what you'd want from a portfolio website. So I decided to leverage CSS's Grid System and HOURS of tweaking the layout to make everything fit in place. The result is a responsive and clean portfolio website that's easy to navigate and looks great on all devices.",
+        "github": "https://www.github.com/ashwnkumar",
+        "stack": [
+            "ReactJS",
+            "JavaScript",
+            "TailwindCSS",
+            "Firebase"
+        ],
+        "features": [
+            "Responsive Bento Grid inspired UI using CSS Grid",
+            "Fully custom design built from scratch (no templates)",
+            "Suports multiple themes and color schemes",
+            "Mobile-first design and adaptive layout tweaks"
+        ]
+    },
+    {
+        "id": "the-record-room",
+        "comingSoon": true,
+        "title": "The Record Room",
+        "subTitle": "A full stack MERN e-commerce platform for vinyl record enthusiasts.",
+        "images": [
+            {
+                "src": "/projects/the-record-room/1.png",
+                "alt": "Landing page of The Record Room",
+                "id": 1
+            }
+        ],
+        "description": "The Record Room is a full stack e-commerce application built for vinyl lovers. Users can explore and purchase vinyl records categorized by artist, genre, and release year. The platform features a smooth shopping experience, complete with cart functionality and secure checkout. An admin panel enables record and user management. From managing inventory to discovering hidden gems in music history, The Record Room is designed to serve both audiophiles and administrators alike.",
+        "link": "https://the-record-room.onrender.com/",
+        "github": "https://github.com/ashwnkumar",
+        "stack": [
+            "ReactJS",
+            "MongoDB",
+            "ExpressJS",
+            "NodeJS",
+            "TailwindCSS",
+            "JWT",
+            "Mongoose",
+            "Redux Toolkit",
+            "Render"
+        ],
+        "features": [
+            "User-friendly storefront with filters for genre, artist, and release year.",
+            "Secure authentication and role-based access using JWT.",
+            "Admin dashboard for managing inventory and registered users.",
+            "Cart and checkout flow with quantity control and purchase summary.",
+            "Responsive design tailored for both desktop and mobile devices.",
+            "Built with the MERN stack and deployed on Render with MongoDB Atlas."
+        ]
     }
 ]

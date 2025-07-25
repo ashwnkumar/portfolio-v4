@@ -1,15 +1,19 @@
 import React from 'react'
 import { admin } from '../../../data/admin'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IconCoffee } from '@tabler/icons-react'
 
 const FooterCard = () => {
     const { socialLinks: links } = admin
     return (
         <div className="w-full h-full flex flex-col items-center justify-between">
-            <div className="text-start">
-                <h3 className='text-2xl'>Like what you see? Or have something on your mind?</h3>
-                <p className='text-xl'>Feel free to reach out!</p>
-                <div className="flex items-center gap-4 mt-2b ">
+            <div className="flex flex-row items-center justify-between w-full">
+                <div className="text-start">
+                    <h3 className='text-2xl flex items-center gap-2 text-primary'>Let’s chat over virtual coffee <IconCoffee size={32} strokeWidth={1.5} /> </h3>
+                    <p className='text-xl'>Whether it’s ideas or feedback, I’m here for it.</p>
+                </div>
+
+                <div className="flex items-center gap-4  ">
                     {links.map((item) => {
                         return (
                             <a
@@ -35,6 +39,7 @@ const FooterCard = () => {
                         );
                     })}
                 </div>
+
             </div>
             <p className='text-sm'> &copy; 2025 Ashwin Kumar. All Rights Reserved</p>
         </div>

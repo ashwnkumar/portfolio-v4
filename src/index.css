@@ -21,7 +21,7 @@
     }
 
     50% {
-      transform: scale(1.125);
+      transform: scale(1.1);
     }
   }
 
@@ -48,7 +48,7 @@
   --color-card: #f1f5f9;
   --color-border: #e2e8f0;
   --color-hover: #e2e8f0;
-  --color-primary: #111827;
+  --color-primary: #0b0f18;
   --color-secondary: #4b5563;
 }
 
@@ -57,8 +57,8 @@
   --color-card: #181818;
   --color-border: #2a4d2a;
   --color-hover: #4d6e4d8f;
-  --color-primary: #56ff56;
-  --color-secondary: #338a33;
+  --color-primary: #4ee64e;
+  --color-secondary: #399939;
 }
 
 
@@ -79,17 +79,23 @@ body {
   font-weight: 300;
 }
 
-/* Custom Scrollbar */
-.custom-scroll::-webkit-scrollbar {
+/* Global Custom Scrollbar */
+::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-.custom-scroll::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background-color: var(--color-dark);
   border-radius: 9999px;
 }
 
-.custom-scroll::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: var(--color-border);
   border-radius: 9999px;
+}
+
+/* Optional: Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) var(--color-dark);
 }

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ArrowUpRight, FileText } from "lucide-react";
 import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
+import Tooltip from "../../Tooltip";
 // import Tooltip from "../../Tooltip"; // Optional
 
 const AboutCard = () => {
@@ -40,18 +41,20 @@ const AboutCard = () => {
         </Link>
       </div>
       <p className="">I build things for the <span className="text-primary font-medium font-secondary">Web.</span></p>
-      <div className="w-full flex justify-end gap-5">
+      <div className="w-full flex justify-end gap-3">
         {actions.map((action, index) => (
-          <a
-            href={action.url}
-            target="_blank"
-            rel="noreferrer"
-            onClick={action.onClick ? action.onClick : null}
-            key={action.title}
-            className="hover:bg-dark"
-          >
-            <action.icon size={32} strokeWidth={1.5} />
-          </a>
+          <Tooltip key={index} text={action.title}>
+            <a
+              href={action.url}
+              target="_blank"
+              rel="noreferrer"
+              onClick={action.onClick ? action.onClick : null}
+              key={action.title}
+              className=""
+            >
+              <action.icon size={32} strokeWidth={1.5} />
+            </a>
+          </Tooltip>
         ))}
       </div>
     </div>

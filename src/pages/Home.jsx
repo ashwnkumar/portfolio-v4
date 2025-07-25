@@ -15,46 +15,43 @@ import ProjectCard from "../components/cards/home/ProjectCard";
 import ImageCard from "../components/cards/home/ImageCard";
 
 const Home = () => {
-
   return (
-    <div className="grid grid-cols-12 gap-6 auto-rows-[minmax(100px,auto)] h-screen overflow-hidden p-5 ">
-
-      <GridCard className={"col-span-2 row-span-1 flex items-center justify-center group"}>
-        {/* <ImageCard/> */}
+    <>
+      <GridCard
+        className={
+          "col-span-1 md:col-span-2 md:row-span-2 flex items-center justify-center group"
+        }
+      >
+        <ImageCard />
       </GridCard>
-      <GridCard className={"col-span-6 row-span-1"}>
+      <GridCard className={"col-span-8 row-span-2"}>
         <AboutCard />
       </GridCard>
-      <GridCard className={"col-span-2 row-span-1"}>
-        <QuoteGenerator />
-      </GridCard>
-      <GridCard className={"col-span-2 row-span-3"} >
-        <TechStackCard />
-      </GridCard>
-      <GridCard
-        className={"col-span-2 row-span-1 bg-dark border-0 !p-0"}
-      >
+      <GridCard className={"col-span-2 row-span-2 bg-dark border-0 !p-0"}>
         <ThemeSwitcher />
       </GridCard>
-      <GridCard className={"col-span-3 row-span-4"} >
+      <GridCard className={"col-span-3 row-span-6"}>
+        <TechStackCard />
+      </GridCard>
+      <GridCard className={"col-span-3 row-span-3"}>
+        <QuoteGenerator />
+      </GridCard>
+      <GridCard className={"col-span-6 row-span-4"}>
         <WorkExpCard />
       </GridCard>
-      <GridCard className={"col-span-2 row-span-2 !p-0"} >
-        <PhotoCard />
-      </GridCard>
-      <GridCard className={"col-span-3 row-span-2 !p-0 overflow-hidden"}>
-        <ProjectCard projectId={"frames-by-ashwin"} />
-      </GridCard>
-      <GridCard className={"col-span-2 row-span-3 !p-0 overflow-hidden"} >
+      <GridCard className={"col-span-3 row-span-3 !p-0 overflow-hidden"}>
         <MusicCard />
       </GridCard>
-      <GridCard className={"col-span-4 row-span-2 !p-0 overflow-hidden"} >
+      <GridCard className={"col-span-6 row-span-3 !p-0 overflow-hidden"}>
         <ProjectCard projectId={"idbfiles"} />
       </GridCard>
-      <GridCard className={"col-span-3 row-span-2"}>
-        <FooterCard />
+      <GridCard className={"col-span-6 row-span-4 !p-0 overflow-hidden"}>
+        <ProjectCard projectId={"frames-by-ashwin"} />
       </GridCard>
-    </div>
+      <GridCard className={"col-span-6 row-span-3 !p-0 overflow-hidden"}>
+        <PhotoCard />
+      </GridCard>
+    </>
   );
 };
 

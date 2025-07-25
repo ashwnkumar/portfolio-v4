@@ -20,7 +20,7 @@ const QuoteGenerator = () => {
       const random = quotes[randomIndex];
       setOutput(random);
       setLoading(false);
-    }, 1000);
+    }, 1500);
   };
 
   useEffect(() => {
@@ -36,10 +36,10 @@ const QuoteGenerator = () => {
   return (
     <div className="w-full flex h-full flex-col items-center justify-between text-primary">
       <div className="flex flex-col items-start justify-start gap-2 w-full min-h-[120px]">
-        <h3 className="text-xl text-secondary">Byte Sized Wisdom:</h3>
-        <p className="text-sm font-secondary">
+        <h3 className="text-xl text-secondary">LifeHacks_prototype.exe</h3>
+        <p className="text-lg font-secondary">
           {loading ? (
-            <span className="animate-pulse text-muted">{thinkingMsg}</span>
+            <span className="animate-pulse text-secondary text-md">{thinkingMsg}</span>
           ) : (
             `// ${output}`
           )}
@@ -50,11 +50,10 @@ const QuoteGenerator = () => {
         type="button"
         onClick={generateQuote}
         disabled={loading}
-        className={`border border-border rounded-lg w-full text-lg py-2 transition-all duration-300 ease-in-out cursor-pointer ${
-          loading
-            ? "opacity-60 cursor-not-allowed"
-            : "hover:bg-hover active:translate-y-1"
-        }`}
+        className={`border border-border rounded-lg w-full text-lg py-2 transition-all duration-300 ease-in-out cursor-pointer ${loading
+          ? "opacity-60 cursor-not-allowed"
+          : "hover:bg-hover active:translate-y-1"
+          }`}
       >
         {loading ? (
           <span className="inline-flex items-center justify-center gap-1">

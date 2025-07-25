@@ -1,19 +1,32 @@
 import { faArtstation, faInstagram, faPinterest, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { IconBrandBlender, IconBrandCss3, IconBrandFigma, IconBrandGithub, IconBrandHtml5, IconBrandJavascript, IconBrandLinkedin, IconBrandMongodb, IconBrandNodejs, IconBrandReact, IconBrandReactNative } from "@tabler/icons-react";
+import { FileText, Github, Mail } from "lucide-react";
 
 export const admin = {
   name: "Ashwin Kumar",
   email: "ashwin12kumar07@gmail.com",
-  linkedin: "https://www.linkedin.com/in/ashwin-kumar-221160240/",
-  github: "https://github.com/ashwnkumar",
-  resume: "/assets/resume.pdf",
+  mailto: { url: "mailto:ashwin12kumar07@gmail.com", icon: Mail, label: "Email" },
+  linkedin: { url: "https://www.linkedin.com/in/ashwin-kumar-221160240/", icon: IconBrandLinkedin, label: "LinkedIn" },
+  github: { url: "https://github.com/ashwnkumar", icon: IconBrandGithub, label: "Github" },
+  resume: { url: "/assets/resume.pdf", icon: FileText, label: "Resume" },
   homeImage: "/assets/home.jpg",
   framesByAshwin: "https://www.instagram.com/frames.by.ashwin/",
   socialLinks: [
     { title: "Instagram", link: "https://www.instagram.com/ashwnkumar/", icon: faInstagram, color: "#E1306C" },
     { title: "X", link: "https://www.instagram.com/ashwnkumaar/", icon: faXTwitter, color: "#000000" },
     { title: "ArtStation", link: "https://www.artstation.com/ashwnkumar/", icon: faArtstation, color: "#42A5F5" },
-    // { title: "Pinterest", link: "https://www.pinterest.com/ashwnkumar07", icon: faPinterest, color: "#E60023" },
-
+  ],
+  "stack": [
+    { label: "ReactJS", icon: IconBrandReact },
+    { label: "MongoDB", icon: IconBrandMongodb },
+    { label: "ExpressJS", icon: IconBrandNodejs },
+    { label: "NodeJS", icon: IconBrandNodejs },
+    { label: "React Native", icon: IconBrandReactNative },
+    { label: "JavaScript", icon: IconBrandJavascript },
+    { label: "HTML", icon: IconBrandHtml5 },
+    { label: "CSS", icon: IconBrandCss3 },
+    { label: "Blender", icon: IconBrandBlender },
+    { label: "Figma", icon: IconBrandFigma },
   ],
   workExp: [
     {

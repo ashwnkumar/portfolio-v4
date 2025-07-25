@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Tooltip = ({ children, text, position = "top" }) => {
+  const [visible, setVisible] = useState(false);
+
+  const positionClasses = {
+    top: "bottom-full left-1/2 -translate-x-1/2 mb-2",
+    bottom: "top-full left-1/2 -translate-x-1/2 mt-2",
+    left: "right-full top-1/2 -translate-y-1/2 mr-2",
+    right: "left-full top-1/2 -translate-y-1/2 ml-2",
+  };
+
   return (
-    <div className="relative group inline-block">
+    <div
+      className="relative inline-block"
+      onMouseEnter={() => setVisible(true)}
+      onMouseLeave={() => setVisible(false)}
+    >
       {children}
-      <div
-        className={`
-          absolute z-10 hidden group-hover:flex 
-          whitespace-nowrap rounded bg-gray-950 px-2 py-1 text-sm text-gray-200 
-          transition-all duration-150
-          ${position === "top" && "bottom-full mb-2 left-1/2 -translate-x-1/2"}
-          ${position === "bottom" && "top-full mt-2 left-1/2 -translate-x-1/2"}
-          ${position === "left" && "right-full mr-2 top-1/2 -translate-y-1/2"}
-          ${position === "right" && "left-full ml-2 top-1/2 -translate-y-1/2"}
-        `}
-      >
-        {text}
-      </div>
+      {visible && (
+        <div
+          className={`absolute z-50 whitespace-nowrap px-2 py-1 text-sm text-white bg-gray-950 rounded shadow transition-opacity duration-150 ${positionClasses[position]}`}
+        >
+          {text}
+        </div>
+      )}
     </div>
   );
 };
