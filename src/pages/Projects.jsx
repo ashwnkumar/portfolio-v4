@@ -4,10 +4,9 @@ import GridCard from "../components/GridCard";
 import ProjectCard from "../components/cards/home/ProjectCard";
 
 const projectGridConfig = [
-  { id: "frames-by-ashwin", className: "col-span-7 row-span-6" },
-  { id: "idbfiles", className: "col-span-5 row-span-4" },
-  { id: "ashwinkumar-dev", className: "col-span-5 row-span-5" },
-  { id: "the-record-room", className: "col-span-7 row-span-3" },
+  { id: "frames-by-ashwin", className: " md:col-span-7 md:row-span-6" },
+  { id: "idbfiles", className: " md:col-span-5 md:row-span-4" },
+  { id: "ashwinkumar-dev", className: " md:col-span-5 md:row-span-5" },
 ];
 
 const Projects = () => {
@@ -15,7 +14,10 @@ const Projects = () => {
     <>
       <PageHeader title="Projects" navTo="/" />
       {projectGridConfig.map(({ id, className }) => (
-        <GridCard key={id} className={`${className} !p-0 overflow-hidden`}>
+        <GridCard
+          key={id}
+          className={`${className} col-span-12 row-span-3 !p-0 overflow-hidden`}
+        >
           <ProjectCard projectId={id} />
         </GridCard>
       ))}

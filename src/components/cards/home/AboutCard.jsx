@@ -19,8 +19,6 @@ const AboutCard = () => {
     document.body.removeChild(link);
   };
 
-
-
   const actions = [
     {
       title: "Download Resume",
@@ -33,14 +31,25 @@ const AboutCard = () => {
   ];
 
   return (
-    <div className="group w-full h-full flex flex-col items-start justify-around text-2xl">
+    <div className="group w-full h-full flex flex-col items-start justify-around ">
       <div className="w-full flex items-center justify-between">
-        <h3 className="text-3xl">Hey there, I'm <span className="text-primary font-medium  font-secondary">Ashwin Kumar</span></h3>
-        <Link to={"/about"} className="bg-card group-hover:bg-primary group-hover:text-dark border border-border text-primary rounded-full p-2 group-hover:rotate-45 transition-all duration-300">
+        <h3 className="text-2xl md:text-3xl">
+          Hey there, I'm{" "}
+          <span className="text-primary font-medium  font-secondary">
+            Ashwin Kumar
+          </span>
+        </h3>
+        <Link
+          to={"/about"}
+          className="bg-card group-hover:bg-primary group-hover:text-dark border border-border text-primary rounded-full p-2 group-hover:rotate-45 transition-all duration-300"
+        >
           <ArrowUpRight />
         </Link>
       </div>
-      <p className="">I build things for the <span className="text-primary font-medium font-secondary">Web.</span></p>
+      <p className="text-xl md:text-2xl">
+        I build things for the{" "}
+        <span className="text-primary font-medium font-secondary">Web.</span>
+      </p>
       <div className="w-full flex justify-end gap-3">
         {actions.map((action, index) => (
           <Tooltip key={index} text={action.title}>
@@ -52,7 +61,7 @@ const AboutCard = () => {
               key={action.title}
               className=""
             >
-              <action.icon size={32} strokeWidth={1.5} />
+              <action.icon size={28} strokeWidth={1.5} />
             </a>
           </Tooltip>
         ))}

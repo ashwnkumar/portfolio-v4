@@ -34,12 +34,14 @@ const QuoteGenerator = () => {
   }, [quotes]);
 
   return (
-    <div className="w-full flex h-full flex-col items-center justify-between text-primary">
+    <div className="w-full flex h-full flex-col items-center justify-between text-primary ">
       <div className="flex flex-col items-start justify-start gap-2 w-full min-h-[120px]">
-        <h3 className="text-xl text-secondary">LifeHacks_prototype.exe</h3>
-        <p className="text-lg font-secondary">
+        <h3 className="text-base md:text-xl text-secondary">LifeHacks.exe</h3>
+        <p className="text-sm md:text-lg font-secondary overflow-y-auto pb-4 md:pb-0">
           {loading ? (
-            <span className="animate-pulse text-secondary text-md">{thinkingMsg}</span>
+            <span className="animate-pulse text-secondary text-md">
+              {thinkingMsg}
+            </span>
           ) : (
             `// ${output}`
           )}
@@ -50,10 +52,11 @@ const QuoteGenerator = () => {
         type="button"
         onClick={generateQuote}
         disabled={loading}
-        className={`border border-border rounded-lg w-full text-lg py-2 transition-all duration-300 ease-in-out cursor-pointer ${loading
-          ? "opacity-60 cursor-not-allowed"
-          : "hover:bg-hover active:translate-y-1"
-          }`}
+        className={`border border-border bg-card rounded-lg w-full text-sm md:text-lg py-2 transition-all duration-300 ease-in-out cursor-pointer  ${
+          loading
+            ? "opacity-60 cursor-not-allowed"
+            : "hover:bg-hover active:translate-y-1"
+        }`}
       >
         {loading ? (
           <span className="inline-flex items-center justify-center gap-1">

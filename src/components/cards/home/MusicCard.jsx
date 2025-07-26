@@ -71,14 +71,14 @@ const MusicCard = () => {
 
     return (
         <div className="group  w-full h-full flex flex-col items-center justify-center">
-            <h3 className='text-base  bg-primary flex items-center gap-1 text-dark absolute top-3 left-3 px-3 py-1 rounded-full z-10'>
+            <h3 className='text-sm md:text-base  bg-primary flex items-center gap-1 text-dark absolute top-3 left-3 px-3 py-1 rounded-full z-10'>
                 <Disc3 strokeWidth={1.5} size={20} /> Currently Jamming To
             </h3>
             <img src={current.cover} alt={current.title} className={`w-full h-full object-cover transition-all duration-500 ${isPlaying ? 'animate-vibe saturate-100' : "saturate-0"}`} />
             <div className="flex flex-col items-center justify-center gap-2 w-full absolute bottom-0 bg-gradient-to-t from-black py-3">
-                <div className="w-full flex flex-col items-start justify-center px-4 text-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-500 group-active:opacity-100">
-                    <p className='text-xl font-medium'>{current.title}</p>
-                    <p className=''>{current.artist}</p>
+                <div className="w-full flex flex-col items-start justify-center px-4 text-gray-200 md:opacity-0 md:group-hover:opacity-100 transition-all duration-500 group-active:opacity-100">
+                    <p className='text-md md:text-xl font-medium'>{current.title}</p>
+                    <p className='text-xs md:text-sm'>{current.artist}</p>
                     <input
                         type="range"
                         name="range"
@@ -87,9 +87,9 @@ const MusicCard = () => {
                         max={duration || 0}
                         value={currentTime}
                         onChange={handleSeek}
-                        className='w-full accent-gray-200'
+                        className='w-full accent-gray-200 my-2 h-1 '
                     />
-                    <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center justify-between w-full text-xs md:text-sm">
                         <span> {formatTime(currentTime)} </span>
                         <span> {formatTime(duration)} </span>
                     </div>
@@ -100,21 +100,21 @@ const MusicCard = () => {
                         onClick={playPrev}
                         className='text-gray-200 rounded-full  cursor-pointer active:translate-y-0.5 transition duration-300'
                     >
-                        <IconPlayerTrackPrevFilled size={32} />
+                        <IconPlayerTrackPrevFilled className='w-5 h-5 md:w-6 md:h-6' />
                     </button>
                     <button
                         type="button"
                         onClick={togglePlay}
                         className='text-gray-200 rounded-full  cursor-pointer active:translate-y-0.5 transition duration-300'
                     >
-                        {isPlaying ? <IconPlayerPauseFilled size={32} /> : <IconPlayerPlayFilled size={32} />}
+                        {isPlaying ? <IconPlayerPauseFilled className='w-5 h-5 md:w-6 md:h-6' /> : <IconPlayerPlayFilled className='w-5 h-5 md:w-6 md:h-6' />}
                     </button>
                     <button
                         type="button"
                         onClick={playNext}
                         className='text-gray-200 rounded-full  cursor-pointer active:translate-y-1 transition duration-300'
                     >
-                        <IconPlayerTrackNextFilled size={32} />
+                        <IconPlayerTrackNextFilled className='w-5 h-5 md:w-6 md:h-6' />
                     </button>
                 </div>
             </div>

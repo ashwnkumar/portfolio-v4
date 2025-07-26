@@ -19,38 +19,86 @@ const Home = () => {
     <>
       <GridCard
         className={
-          "col-span-1 md:col-span-2 md:row-span-2 flex items-center justify-center group"
+          "hidden  md:col-span-2 md:row-span-2 md:flex items-center justify-center group"
         }
       >
         <ImageCard />
       </GridCard>
-      <GridCard className={"col-span-8 row-span-2"}>
+      <GridCard className={"col-span-12  md:col-span-8 row-span-2"}>
         <AboutCard />
       </GridCard>
-      <GridCard className={"col-span-2 row-span-2 bg-dark border-0 !p-0"}>
-        <ThemeSwitcher />
-      </GridCard>
-      <GridCard className={"col-span-3 row-span-6"}>
-        <TechStackCard />
-      </GridCard>
-      <GridCard className={"col-span-3 row-span-3"}>
-        <QuoteGenerator />
-      </GridCard>
-      <GridCard className={"col-span-6 row-span-4"}>
+      {/* Mobile Card */}
+      <GridCard
+        className={
+          "block md:hidden col-span-12 row-span-3 md:col-span-6 md:row-span-4"
+        }
+      >
         <WorkExpCard />
       </GridCard>
-      <GridCard className={"col-span-3 row-span-3 !p-0 overflow-hidden"}>
+      {/* Mobile Card */}
+      <GridCard
+        className={
+          "col-span-6 row-span-2 md:col-span-2 md:row-span-2 bg-dark border-0 !p-0"
+        }
+      >
+        <ThemeSwitcher />
+      </GridCard>
+      <GridCard className={"col-span-6 row-span-4 md:col-span-3 md:row-span-6"}>
+        <TechStackCard />
+      </GridCard>
+      <GridCard
+        className={"col-span-6 row-span-2  md:col-span-3 md:row-span-3 !pb-2"}
+      >
+        <QuoteGenerator />
+      </GridCard>
+      {/* Desktop Card */}
+      <GridCard
+        className={
+          "hidden md:block col-span-12 row-span-3 md:col-span-6 md:row-span-4"
+        }
+      >
+        <WorkExpCard />
+      </GridCard>
+      {/* Desktop Card */}
+      <GridCard
+        className={
+          "col-span-6 row-span-2 md:col-span-3 md:row-span-3 !p-0 overflow-hidden"
+        }
+      >
         <MusicCard />
       </GridCard>
-      <GridCard className={"col-span-6 row-span-3 !p-0 overflow-hidden"}>
-        <ProjectCard projectId={"idbfiles"} />
-      </GridCard>
-      <GridCard className={"col-span-6 row-span-4 !p-0 overflow-hidden"}>
-        <ProjectCard projectId={"frames-by-ashwin"} />
-      </GridCard>
-      <GridCard className={"col-span-6 row-span-3 !p-0 overflow-hidden"}>
+      {/* Mobile Card */}
+      <GridCard
+        className={
+          "block md:hidden col-span-6 row-span-2 md:col-span-6 md:row-span-3 !p-0 overflow-hidden"
+        }
+      >
         <PhotoCard />
       </GridCard>
+      {/* Mobile Card */}
+      <GridCard
+        className={
+          "col-span-12 row-span-3 md:col-span-6 md:row-span-3 !p-0 overflow-hidden"
+        }
+      >
+        <ProjectCard projectId={"idbfiles"} />
+      </GridCard>
+      <GridCard
+        className={
+          "col-span-12 row-span-3 md:col-span-6 md:row-span-4 !p-0 overflow-hidden"
+        }
+      >
+        <ProjectCard projectId={"frames-by-ashwin"} />
+      </GridCard>
+      {/* Desktop Card */}
+      <GridCard
+        className={
+          "hidden md:block md:col-span-6 md:row-span-3 !p-0 overflow-hidden"
+        }
+      >
+        <PhotoCard />
+      </GridCard>
+      {/* Desktop Card */}
     </>
   );
 };

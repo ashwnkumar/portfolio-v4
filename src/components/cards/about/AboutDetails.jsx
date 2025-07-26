@@ -25,8 +25,8 @@ const AboutBlock = ({ title, children, body, highlight }) => {
 
     return (
         <div className="flex flex-col items-start justify-center ">
-            <h4 className='text-xl uppercase text-primary'>{title}</h4>
-            <p className='text-lg'>
+            <h4 className='text-lg md:text-xl uppercase text-primary'>{title}</h4>
+            <p className='text-md md:text-lg'>
                 {formatText(body, highlight)}
             </p>
         </div>

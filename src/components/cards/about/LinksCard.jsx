@@ -16,7 +16,7 @@ const LinksCard = () => {
                     rel="noopener noreferrer"
                     className="group aspect-square bg-card flex flex-col items-center justify-between p-4 rounded-xl bg-muted/10 hover:bg-muted/20 transition"
                 >
-                    <span className="self-start text-lg text-muted-foreground flex items-start gap-1 group-hover:scale-105 group-hover:text-primary transition-all duration-300 ">{link.label} <ArrowUpRight size={20} /> </span>
+                    <span className="self-start text-sm md:text-lg  flex items-start gap-1 group-hover:scale-105 group-hover:text-primary transition-all duration-300 ">{link.label} <ArrowUpRight size={20} /> </span>
                     <span className="self-end text-2xl  group-hover:text-primary transition-all duration-300">
                         <link.icon size={32} strokeWidth={1.5} />
                     </span>

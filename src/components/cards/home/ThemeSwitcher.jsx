@@ -18,12 +18,12 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <div className="grid grid-cols-2 grid-rows-[repeat(2,_1fr)] w-full h-full gap-4 mt-2">
+    <div className="grid grid-cols-2 grid-rows-[repeat(2,_1fr)] w-full h-full gap-2 md:gap-4 mt-2">
       {themes.map((item) => (
         <button
           onClick={() => changeTheme(item.key)}
           key={item.key}
-          className="w-full h-full bg-card group flex flex-col items-center justify-center cursor-pointer rounded-2xl border border-border gap-1"
+          className="w-full h-full bg-card group flex flex-col items-center justify-center cursor-pointer rounded-2xl border border-border "
         >
           <span
             className={`bg-dark p-2 rounded-full z-10 border border-border ${item.key === theme ? "bg-primary text-dark" : "hover:bg-hover"
@@ -31,7 +31,7 @@ const ThemeSwitcher = () => {
           >
             <item.icon size={28} strokeWidth={1.5} />
           </span>
-          <p className="text-base">{item.name}</p>
+          <p className="text-xs md:text-base">{item.name}</p>
         </button>
       ))}
     </div>

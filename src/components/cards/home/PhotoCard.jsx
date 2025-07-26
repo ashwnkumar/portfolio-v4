@@ -19,8 +19,7 @@ const PhotoCard = () => {
     return (
         <div className=" w-full h-full mx-auto flex items-center justify-center overflow-hidden rounded-2xl shadow-lg text-gray-200">
             <div className="w-full items-center justify-between">
-
-                <a href={admin.framesByAshwin} target="_blank" rel="noreferrer" className='flex items-center gap-1 text-start text-base absolute top-3 left-3 z-20  px-3 bg-primary text-dark rounded-full '>
+                <a href={admin.framesByAshwin} target="_blank" rel="noreferrer" className='flex items-center gap-1 text-start text-sm md:text-base absolute top-3 left-3 z-20  px-3 bg-primary text-dark rounded-full '>
                     <IconBrandInstagram strokeWidth={1.5} /> Beyond the 9-5
                 </a>
             </div>
@@ -52,7 +51,7 @@ const PhotoCard = () => {
                     <button
                         key={index}
                         onClick={() => setCurrent(index)}
-                        className={`w-3 h-3 rounded-full cursor-pointer ${index === current ? 'bg-blue-500' : 'bg-gray-300'
+                        className={`w-2 md:w-3 h-2 md:h-3 rounded-full cursor-pointer ${index === current ? 'bg-blue-500' : 'bg-gray-300'
                             }`}
                     />
                 ))}

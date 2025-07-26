@@ -1,23 +1,58 @@
 [
-    {
-        "id": 0,
-        "title": "Lose My Mind",
-        "artist": "Don Toliver ft. Doja Cat",
-        "src": "/music/audio/Lose My Mind.mp3",
-        "cover": "/music/cover/Lose My Mind.jpg"
-    },
-    {
-        "id": 1,
-        "title": "Too Many Nights ",
-        "artist": "Metro Boomin ft. Don Toliver",
-        "src": "/music/audio/Too Many Nights.mp3",
-        "cover": "/music/cover/Too Many Nights.jpg"
-    },
-    {
-        "id": 2,
-        "title": "The Middle",
-        "artist": "Jimmy Eat World",
-        "src": "/music/audio/The Middle.mp3",
-        "cover": "/music/cover/The Middle.jpg"
-    }
+  {
+    "id": 0,
+    "title": "Lose My Mind",
+    "artist": "Don Toliver ft. Doja Cat",
+    "src": "/music/audio/Lose My Mind.mp3",
+    "cover": "/music/cover/Lose My Mind.jpg"
+  },
+  {
+    "id": 1,
+    "title": "Too Many Nights",
+    "artist": "Metro Boomin ft. Don Toliver",
+    "src": "/music/audio/Too Many Nights.mp3",
+    "cover": "/music/cover/Too Many Nights.jpg"
+  },
+  {
+    "id": 2,
+    "title": "The Middle",
+    "artist": "Jimmy Eat World",
+    "src": "/music/audio/The Middle.mp3",
+    "cover": "/music/cover/The Middle.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Victory Lap",
+    "artist": "Fred again.., Skepta & PlaqueBoyMax",
+    "src": "/music/audio/Victory Lap.mp3",
+    "cover": "/music/cover/Victory Lap.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Under The Knife",
+    "artist": "Rise Against",
+    "src": "/music/audio/Under The Knife.mp3",
+    "cover": "/music/cover/Under The Knife.jpg"
+  },
+  {
+    "id": 5,
+    "title": "SKELETONS",
+    "artist": "Travis Scott",
+    "src": "/music/audio/SKELETONS.mp3",
+    "cover": "/music/cover/SKELETONS.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Mr. Brightside",
+    "artist": "The Killers",
+    "src": "/music/audio/Mr. Brightside.mp3",
+    "cover": "/music/cover/Mr. Brightside.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Wat's Wrong",
+    "artist": "Isiah Rashad (feat. Zacari & Kendrick Lamar)",
+    "src": "/music/audio/Wat's Wrong.mp3",
+    "cover": "/music/cover/Wat's Wrong.jpg"
+  }
 ]
