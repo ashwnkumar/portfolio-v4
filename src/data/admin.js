@@ -85,6 +85,11 @@ export const admin = {
       company: "NDSoftTech Solutions",
       position: "SDE - Trainee",
       from: "Jul 2025",
+       work: [
+        "Developed user facing interfaces using React Native for multiple applications.",
+        "Optimized codebase readability by introducing reusable components.",
+        "Worked with backend database and transformed data in various way to fetch useful data from the backend.",
+      ],
       skills: [
         "ReactJS",
         "NodeJS",
