@@ -25,7 +25,6 @@ const ProjectDetails = () => {
     );
   };
   const project = projectData.find((project) => project.id === projectId);
-  console.log("project", project);
   return (
     <>
       <PageHeader

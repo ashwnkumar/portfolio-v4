@@ -7,7 +7,7 @@ const LinksCard = () => {
     const links = [admin.mailto, admin.github, admin.linkedin, admin.resume];
 
     return (
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-y-2 gap-x-5  w-full h-full">
             {links.map((link, index) => (
                 <a
                     key={index}

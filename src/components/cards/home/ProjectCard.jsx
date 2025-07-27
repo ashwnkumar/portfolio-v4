@@ -6,8 +6,6 @@ import Projects from "../../../pages/Projects";
 
 const ProjectCard = ({ projectId }) => {
   const project = projectList.find((project) => project.id === projectId);
-  console.log("projectList from project card", projectList);
-  console.log("project from project card", project);
   if (!project) {
     return <div>Project not found</div>;
   }

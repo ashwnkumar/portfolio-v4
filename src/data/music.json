@@ -47,12 +47,5 @@
     "artist": "The Killers",
     "src": "/music/audio/Mr. Brightside.mp3",
     "cover": "/music/cover/Mr. Brightside.jpg"
-  },
-  {
-    "id": 7,
-    "title": "Wat's Wrong",
-    "artist": "Isiah Rashad (feat. Zacari & Kendrick Lamar)",
-    "src": "/music/audio/Wat's Wrong.mp3",
-    "cover": "/music/cover/Wat's Wrong.jpg"
   }
 ]
