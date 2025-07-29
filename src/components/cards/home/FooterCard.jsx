@@ -6,8 +6,8 @@ import { IconCoffee } from "@tabler/icons-react";
 const FooterCard = () => {
   const { socialLinks: links } = admin;
   return (
-    <div className="w-full h-full flex flex-col items-center justify-between divide-y divide-border">
-      <div className="flex flex-col md:flex-row items-center justify-between w-full gap-3 pb-3">
+    <div className="w-full h-full flex flex-col items-center  justify-between ">
+      <div className="flex flex-col md:flex-row items-center justify-between w-full pb-4">
         <div className="text-start">
           <h3 className="text-xl md:text-2xl flex items-center gap-2 text-primary">
             Let’s chat over virtual coffee{" "}
@@ -26,7 +26,7 @@ const FooterCard = () => {
                 key={item.title}
                 target="_blank"
                 rel="noreferrer"
-                className="p-4 hover-link rounded-xl border border-border hover:text-gray-200 transition-all duration-300 ease-in-out"
+                className="p-3 md:p-4 hover-link rounded-xl border border-border hover:text-gray-200 transition-all duration-300 ease-in-out"
                 style={{
                   transition: "background-color 0.3s ease-in-out",
                 }}
@@ -37,13 +37,16 @@ const FooterCard = () => {
                   e.currentTarget.style.backgroundColor = "transparent";
                 }}
               >
-                <FontAwesomeIcon icon={item.icon} size="2xl" />
+                <FontAwesomeIcon icon={item.icon} size="xl" />
               </a>
             );
           })}
         </div>
       </div>
-      <p className="text-sm"> &copy; 2025 Ashwin Kumar. All Rights Reserved</p>
+      <p className="text-sm border-t border-border pt-2 md:pt-4  w-full text-center">
+        {" "}
+        &copy; 2025 Ashwin Kumar. All Rights Reserved
+      </p>
     </div>
   );
 };

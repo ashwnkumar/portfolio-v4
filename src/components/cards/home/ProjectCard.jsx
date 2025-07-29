@@ -36,7 +36,7 @@ const ProjectCard = ({ projectId }) => {
         {!project.comingSoon && (
           <Link
             to={`/projects/${project.id}`}
-            className="text-sm md:text-lg flex items-center gap-2 px-2 md:px-3 md:py-2 rounded-full bg-primary text-dark active:translate-y-0.5 transition-all duration-300 hover:scale-105 whitespace-nowrap"
+            className="text-sm md:text-lg flex h-fit items-center gap-2 px-2 md:px-3 py-1 ml-5 rounded-full bg-primary text-dark active:translate-y-0.5 transition-all duration-300 hover:scale-105 whitespace-nowrap"
           >
             View Project
             <span className="group-hover:rotate-45 transition-all duration-700">

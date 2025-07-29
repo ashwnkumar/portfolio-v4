@@ -18,7 +18,7 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <div className="grid grid-cols-2 grid-rows-[repeat(2,_1fr)] w-full h-full gap-2 md:gap-4 mt-2">
+    <div className="grid grid-cols-2 grid-rows-[repeat(2,_1fr)] w-full h-full gap-4 ">
       {themes.map((item) => (
         <button
           onClick={() => changeTheme(item.key)}

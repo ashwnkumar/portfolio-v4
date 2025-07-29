@@ -4,6 +4,7 @@ import Projects from "../pages/Projects";
 import About from "../pages/About";
 import Home from "../pages/Home";
 import Layout from "./Layout";
+import PageNotFound from "../pages/PageNotFound";
 
 export const router = createBrowserRouter([
   {
@@ -16,4 +17,5 @@ export const router = createBrowserRouter([
       { path: "projects/:projectId", element: <ProjectDetails /> },
     ],
   },
+  { path: "*", element: <PageNotFound />},
 ]);

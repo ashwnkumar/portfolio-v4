@@ -12,7 +12,7 @@ import Tooltip from "../../Tooltip";
 const AboutCard = () => {
   const handleDownnloadResume = () => {
     const link = document.createElement("a");
-    link.href = admin.resume;
+    link.href = admin.resume.url;
     link.download = "Ashwin-Kumar-Resume.pdf";
     link.click();
     link.remove();
@@ -26,8 +26,8 @@ const AboutCard = () => {
       icon: FileText,
       onClick: handleDownnloadResume,
     },
-    { title: "Github", url: admin.github, icon: IconBrandGithub },
-    { title: "LinkedIn", url: admin.linkedin, icon: IconBrandLinkedin },
+    { title: "Github", url: admin.github.url, icon: IconBrandGithub },
+    { title: "LinkedIn", url: admin.linkedin.url, icon: IconBrandLinkedin },
   ];
 
   return (
@@ -41,7 +41,7 @@ const AboutCard = () => {
         </h3>
         <Link
           to={"/about"}
-          className="bg-card group-hover:bg-primary group-hover:text-dark border border-border text-primary rounded-full p-2 group-hover:rotate-45 transition-all duration-300"
+          className="bg-primary md:bg-card md:group-hover:bg-primary md:group-hover:text-dark border border-border text-dark md:text-primary rounded-full p-2 group-hover:rotate-45 transition-all duration-300"
         >
           <ArrowUpRight />
         </Link>
@@ -54,7 +54,7 @@ const AboutCard = () => {
         {actions.map((action, index) => (
           <Tooltip key={index} text={action.title}>
             <a
-              href={action.url}
+              href={action.onClick ? null : action.url}
               target="_blank"
               rel="noreferrer"
               onClick={action.onClick ? action.onClick : null}
@@ -71,13 +71,3 @@ const AboutCard = () => {
 };
 
 export default AboutCard;
-//  <a
-//             href={action.url}
-//             target="_blank"
-//             rel="noreferrer"
-//             onClick={action.onClick ? action.onClick : null}
-//             key={action.title}
-//             className="hover:bg-dark"
-//           >
-//             <action.icon size={32} strokeWidth={1.5} />
-//           </a>

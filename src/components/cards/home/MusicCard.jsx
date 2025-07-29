@@ -76,7 +76,7 @@ const MusicCard = () => {
   return (
     <div className="group  w-full h-full flex flex-col items-center justify-center">
       <h3 className="text-sm md:text-base  bg-primary flex items-center gap-1 text-dark absolute top-3 left-3 px-3 py-1 rounded-full z-10">
-        <Disc3 strokeWidth={1.5} size={20} /> Currently Jamming To
+        <Disc3 strokeWidth={1.5} size={20} /> Now Playing
       </h3>
       <img
         src={current.cover}

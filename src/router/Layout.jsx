@@ -13,7 +13,7 @@ const Layout = () => {
 
   return (
     <div className=" flex items-start  justify-center w-full min-h-screen">
-      <div className="relative  w-full md:max-w-7xl min-h-screen  grid grid-cols-12  auto-rows-[100px] md:auto-rows-[90px] gap-4 md:gap-5 p-2 md:p-10 custom-scroll">
+      <div className="relative  w-full md:max-w-7xl min-h-screen  grid grid-cols-12  auto-rows-[100px] md:auto-rows-[90px] gap-4 md:gap-5 p-5 md:p-10 custom-scroll">
         {/* <Navbar /> */}
         <Outlet />
         <GridCard className={"col-span-12 row-span-2 "}>

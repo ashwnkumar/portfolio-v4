@@ -36,14 +36,14 @@ const PhotoCard = () => {
                 onClick={prevSlide}
                 className="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-40 hover:bg-opacity-60 text-white p-2 rounded-full"
             >
-                <ChevronLeft />
+                <ChevronLeft className='w-4 h-4 md:w-6 md:h-6' />
             </button>
 
             <button
                 onClick={nextSlide}
                 className="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-40 hover:bg-opacity-60 text-white p-2 rounded-full"
             >
-                <ChevronRight />
+                <ChevronRight className='w-4 h-4 md:w-6 md:h-6' />
             </button>
 
             <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 py-4 flex justify-center mt-4 gap-2">
