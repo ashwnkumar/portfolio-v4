@@ -65,7 +65,7 @@
       }
     ],
     "description": "This project came out of a rabbit hole. I stumbled on IndexedDB while messing around with browser storage options, and was surprised by how powerful it actually is. So I built IDBFiles; a file manager that works entirely in your browser. You can upload, preview, and download files without ever hitting a server. It’s all local, persistent, and private. Everything runs client-side, and your files stick around until you decide to delete them or clear browser data.",
-    "link": "https://www.idbfiles.web.app/",
+    "link": "https://idbfiles.web.app/",
     "github": "https://github.com/ashwnkumar?tab=repositories&q=idbfiles",
     "stack": ["IndexedDB", "ReactJS", "JavaScript", "TailwindCSS", "Firebase"],
     "features": [
